@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container my-3">
+    <h1 class="font-weight-bold">Update Usuario!</h1>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur autem beatae saepe at nulla accusamus,
+        mollitia quibusdam laborum, voluptatem corporis molestiae ipsa, id quasi distinctio deserunt et. Ipsam, dolorem
+        quidem.Itaque, magnam explicabo! Corrupti eos optio repellat debitis omnis voluptates laudantium fuga dolore
+        incidunt autem. Veritatis harum sunt eveniet sequi, impedit quaerat modi assumenda recusandae molestias adipisci
+        laborum cumque ad.
+    </p>
+    
+      <h4>Update Usuario(Lista)</h4>
+      <ul class="list-group">
+         {% for user in users %}
+            <a href="{% url 'update_usuario' user.id %}">
+                <li >{{user.nome}} </li>
+            </a>
+        {% endfor %}
+    </ul>
+     
+      
+  </ul>
+
+</div>
+
+{% endblock content %}

@@ -1,0 +1,58 @@
+h1 a, h2 a {
+    color: #C25100; 
+}
+
+button#identificado {
+    background-color: DodgerBlue;
+  }
+
+a{
+   
+    color:blue;
+    padding: 14px 25px;
+    
+    
+}  
+
+form#search{
+   
+   padding:30px ;
+   padding-left: 280px;
+   margin-right: 100px;
+
+}
+
+
+h3{
+    margin: 25px;;
+
+}
+
+nav.nav_menu{
+    padding: 30px;
+}
+form#formulario{
+    padding-left: 150px;
+}
+a#deletA{
+
+    padding-left: 20px;
+    color:red
+    
+ 
+}
+a#home{
+    padding-left: 57px;
+
+}
+nav#nav_menu{
+
+    padding-left:500px;
+}
+div#div_menu{
+    padding-left:50px;   
+}
+img{
+
+    display: inline-block;
+}

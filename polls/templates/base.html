@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap Tutorial</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/polls.css' %}">
+</head>
+
+<body>
+
+    
+ <nav  margin-right: 200px; id=nav_menu class="navbar navbar-expand-lg navbar-light bg-light">
+  {% load static %}
+  <img  style="padding-left:-20px" height="140px" width="140px" id="soma" src="{% static 'media/soma.jpeg' %}" alt="My image">
+  <div style="padding-left:-40px;display: inline-block;" id="div_menu" class="d-flex flex-row bd-highlight mb-3">
+     
+    <a class="navbar-brand" href="#"></a>
+    
+    <div class="collapse navbar-collapse d-lg-flex justify-content-end" " id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a id="home" class="nav-link active" aria-current="page" href="{% url 'lista_produtos' %}">Home</a>
+        </li>
+        
+        <div class="dropdown">
+        <button id=teste class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-                       expanded="false">
+            Categorias
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="{% url 'create_categoria' %}">Cadastrar Categoria</a>
+        </div>
+    </div>
+        <div class="dropdown">
+        <button style="background-color: black" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-                       expanded="false">
+            Usuarios
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="{% url 'create_usuario' %}">Cadastrar usuário</a>
+            <a class="dropdown-item" href="{% url 'updateUserPage' %}">Update Usuario</a>
+            <a class="dropdown-item" href="{% url 'dados_user' %}">Data User</a>
+         </div>
+    </div>
+    <div class="dropdown">
+      <button style="background-color: green" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-                       expanded="false">
+         Marcas
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="{% url 'create_marca' %}">Cadastrar Marca</a>
+          
+       </div>
+  </div>
+        <div class="dropdown">
+        <button style="background-color: blue" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-                       expanded="false">
+            Produtos
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="{% url 'create_produto' %}">New Produto</a>
+            <a class="dropdown-item" href="{% url 'updateProdutoPage' %}">Update Produto</a>
+         </div>
+    </div>
+
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+      <form id="search" class="d-flex">
+        <input   class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>    
+
+    
+    
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    {% block content %}
+    {% endblock content %}
+</body>
+</html>

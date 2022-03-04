@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+   
+    <form id="formulario" method="POST" class="post-form">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button id=identificado type="submit" class="save btn btn-default">Save</button>
+        
+    </form>
+    <!--caso tenha o produto-->
+{% endblock %}

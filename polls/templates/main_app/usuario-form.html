@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+   
+    <form id="formulario" method="POST" class="post-form">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button id=identificado type="submit" class="save btn btn-default">Save</button>
+        {% if usuario %}
+            <a id="deletA" href="{% url 'delete_user' usuario.id %}">Delete</a>
+        {% endif %}      
+    </form>
+    <!--caso tenha o produto-->
+{% endblock %}

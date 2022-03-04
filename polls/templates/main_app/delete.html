@@ -1,0 +1,30 @@
+<!-- home.html -->
+{% extends "base.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="margin-left:130px;" class="container">
+        <form  method="POST">
+            {% csrf_token %}
+            <h4>Deseja mesmo remover o produto {{produto.description}} ?</h4>
+            <button  style="color:red;"type="submit">Confirmar exclusão</button>
+            
+        </form>
+    </div> 
+
+    <div style="padding-top:5px; padding-left:120px" >
+        <a style="padding-bottom: 200px;"href="{% url 'lista_produtos' %}">
+            <button style="background-color: blue;color: white;">Voltar ao Menu principal</button>
+        </a> 
+    </div>
+</body>
+</html>
+{% endblock content %}
